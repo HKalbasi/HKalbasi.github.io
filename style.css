@@ -1,0 +1,90 @@
+body {
+  background-color:	#CEC;
+  font-family:	sans-serif;
+  direction: rtl;
+}
+
+.box {
+  background-color:	#FFF;
+  border-style:	solid;
+  border-width:       2px;
+  padding:		5px;
+  margin-top:	        5px;
+}
+
+.dark {
+  background-color:	#EEE;
+}
+
+img.project {
+  border-style:       none;
+}
+
+.photo {
+  vertical-align:     top;
+}
+
+h2 {
+  background-color:  #CEC;
+  margin-top:        0;
+}
+
+.sub-box {
+  border-color: #000000;
+  background-color:	#F8F8F8;
+  border-style:	solid;
+  border-width: 3px;
+  padding: 2px;
+  margin-top:	2px;
+}
+
+.sub-box-list{
+  display: table;
+  border-spacing: 2px;
+}
+
+h2.morespace {
+  margin-top:        20px;
+  margin-bottom:     5px;
+}
+
+ul {
+  overflow:          hidden;
+}
+
+.clearfix:after {
+clear:both;
+content:".";
+display:block;
+height:0;
+line-height:0;
+visibility:hidden;
+}
+
+#topnav{
+  width:100%;
+}
+
+.nav-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.nav-button:hover {
+  background-color: green;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+}
+pre{
+  direction: ltr;
+  background-color: #eeeeee
+}
