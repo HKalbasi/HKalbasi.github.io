@@ -7,7 +7,32 @@
     تاریخ تولد: ۶ بهمن ۱۳۷۹
     </li>
     <li>
+      سن: <span id="age"></span>  (
+        <a href="/notes/calender-is-broken.html">چرا ماه وجود ندارد؟</a>
+      )
+    </li>
+    <li>
     محل تولد: تهران
     </li>
   </ul>
+  <script>
+    const update = () => {
+      const d = document.getElementById('age');
+      let x = (new Date - new Date('2001-01-25'));
+      const f = (d) => {
+        const s = x%d;
+        x = Math.floor(x/d);
+        return s;
+      };
+      f(1000);
+      const second = f(60);
+      const minute = f(60);
+      const hour = f(24);
+      const day = f(365.25);
+      const year = x;
+      d.innerText = `${year} سال و ${day} روز و ${hour} ساعت و ${minute} دقیقه و ${second} ثانیه`;
+    };
+    update();
+    setInterval(update, 1000);
+  </script>
 </box-item>
