@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+      }
+      .probid {
+        font-weight: bold;
+        width: 1rem;
+      }
+      .gozine {
+        height: 1.3rem;
+        width: 1.3rem;
+        border-radius: 0.5rem;
+        border-width: 1px;
+        border: black;
+        border-style: solid;
+        margin: 0.2rem;
+        color: #bbb;
+      }
+      .answered {
+        background-color: black;
+        color: black;
+      }
+      table {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body dir="rtl">
+    <h1 id="title">نام آزمون</h1>
+    <table dir="ltr">
+      <tbody id="problems"></tbody>
+    </table>
+    <div style="height: 100px;"></div>
+    <button id="build">باز نشانی</button>
+    <script>
+      const build = (title, countProblem, countGozine) => {
+        document.getElementById('title').innerText = title;
+        const d = document.getElementById('problems');
+        d.innerHTML = '';
+        for (let i = 0; i < countProblem; i += 1) {
+          const row = document.createElement('tr');
+          const prob = document.createElement('td');
+          prob.className = 'probid';
+          prob.innerText = i+1;
+          row.appendChild(prob);
+          for (let j = 0; j < countGozine; j += 1) {
+            const goz = document.createElement('td');
+            goz.innerText = j+1;
+            goz.className = 'gozine';
+            goz.onclick = () => goz.classList.toggle('answered');
+            row.appendChild(goz);
+          }
+          d.appendChild(row);
+        }
+      };
+      build('نام آزمون', 20, 5);
+      document.getElementById('build').onclick = () => {
+        build(
+          window.prompt('نام آزمون؟'),
+          window.prompt('تعداد سوال؟'),
+          window.prompt('تعداد گزینه؟'),
+        );
+      }
+    </script>
+  </body>
+</html>
